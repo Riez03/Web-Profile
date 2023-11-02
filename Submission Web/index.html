@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Personal Web</title>
+ 
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="Style/SubmissionStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  </head>
+  <body>
+    <header class="navbar-container">
+        <div class="logo">
+          <img class="logo-1" src="Image/privacy-logo-freelogovectors.net_.webp" alt="privacy-logo">
+          <img onclick="DropDownFunction()" align="right" class="dropbtn" src="Image/burger-menu-icon-12.jpg" alt="burger-button">
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Login</a>
+            <a href="#">Project</a>
+            <a href="#">Settings</a>
+            <a href="#">Feature</a>
+            <a href="#">Source</a>
+            <a href="#">Notification</a>
+          </div>
+        </div>
+        <nav class="nav-list">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+       </header>
+
+    <main>
+      <div class="content">
+        <article>
+            <h1 class="title">Overview</h1>
+            <span class="tgl-post">
+                Posted at 11.04 WIB, 03 September 2023
+            </span>
+            <p>
+                Hi, I am an IT student living in Yogyakarta. Currently studying at UAD and following the Cloud Computing Learning Path at Bangkit MSIB.
+            </p>
+        </article>
+
+        <article>
+          <h1 class="title">Experience</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis atque quas laboriosam similique labore delectus ut id? Provident inventore cum amet. Fugiat facilis, sunt possimus omnis perspiciatis sequi quod ut?.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et cumque neque. Quidem impedit vitae ipsam sed dolorem illo nesciunt<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span>
+          </p>
+          <button onclick="btnMore()" id="myBtn">Read more</button>
+        </article>
+      </div>
+
+        <aside>
+            <div class="profil">
+              <div class="prof-image">
+                <img src="Image/personal.jpg" alt="person">
+              </div>
+              <div class="social-media">
+                <ul>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                </ul>
+              </div>
+
+              <div>
+                <p></p>
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th><h3><font color="">Skill</font></h3></th>
+                            <th><h3><font color="">Level</font></h3></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li><font color="black">HTML, CSS</font></li>
+                                    <li><font color="black">JavaScript</font></li>
+                                    <li><font color="black">C/C++</font></li>
+                                    <li><font color="black">Java</font></li>
+                                    <li><font color="black">Python</font></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><font color="black">Advance</font></li>
+                                    <li><font color="black">Intermediate</font></li>
+                                    <li><font color="black">Advance</font></li>
+                                    <li><font color="black">Intermediate</font></li>
+                                    <li><font color="black">Intermediate</font></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                    
+              </div>
+            </div>
+          </aside>
+    </main>
+
+    <footer>
+        Copyright &copy; 2023-2024 All Right Reserved - Designed By Fahrizky S.I
+    </footer>
+
+    <script>
+    function DropDownFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+
+    function btnMore() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    }
+    </script>
+  </body>
+</html>
